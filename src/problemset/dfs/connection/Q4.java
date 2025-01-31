@@ -1,4 +1,4 @@
-package dfs;
+package problemset.dfs.connection;
 
 /**
  * 백준 24480(실버2)
@@ -62,7 +62,7 @@ public class Q4 {
         for(int i = 1; i <= N; i++){
             Collections.sort(graph[i], Collections.reverseOrder());
         }
-        // 3. dfs 재귀함수 호출
+        // 3. algorithm.dfs 재귀함수 호출
         dfs(R);
         // 4. 출력
         for(int i = 1; i <= N; i++){

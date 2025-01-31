@@ -1,8 +1,14 @@
-package dfs;
+package problemset.dfs.connection;
 
 import java.util.*;
 import java.io.*;
 
+
+/**
+ * 바이러스
+ * 백준 2606(실버 3)
+ * DFS - 연결된 요소 찾기 유형
+ */
 public class Q1 {
 
     static boolean[][] graph;
@@ -44,7 +50,7 @@ public class Q1 {
             graph[y][x] = true;
         }
 
-        // 2. dfs(재귀함수) 호출
+        // 2. algorithm.dfs(재귀함수) 호출
         dfs(1);
 
         // 3. 출력

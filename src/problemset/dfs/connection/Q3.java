@@ -1,4 +1,4 @@
-package dfs;
+package problemset.dfs.connection;
 
 import java.util.*;
 import java.io.*;
@@ -53,7 +53,7 @@ public class Q3 {
         for (int i = 1; i <= N; i++) {
             Collections.sort(graph[i]);
         }
-        // 3. dfs 호출
+        // 3. algorithm.dfs 호출
         dfs(R);
         // 3. 출력
 

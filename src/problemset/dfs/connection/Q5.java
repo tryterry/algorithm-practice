@@ -1,4 +1,4 @@
-package dfs;
+package problemset.dfs.connection;
 
 import java.util.*;
 import java.io.*;
@@ -61,7 +61,7 @@ public class Q5 {
             Collections.sort(graph[i]);
         }
 
-        // 3. dfs 재귀함수 호출
+        // 3. algorithm.dfs 재귀함수 호출
 
         dfs(V);
 
