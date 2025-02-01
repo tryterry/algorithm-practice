@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 /**
- * ?? ??: 10869
- * ?? ??: ????
+ * 문제 번호: 10869
+ * 문제 이름: 사칙연산
  */
 
 public class q_10869 {

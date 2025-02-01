@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 /**
- * ?? ??: 1008
- * ?? ??: A/B
+ * 문제 번호: 1008
+ * 문제 이름: A/B
  */
 
 public class q_1008 {
