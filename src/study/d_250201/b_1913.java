@@ -23,22 +23,16 @@ public class b_1913 {
 
         arr[x][y] = count;
 
-        /**
-         * 0: 상
-         * 1: 우
-         * 2: 하
-         * 3: 좌
-         */
         int v = 0; // 방향
         int step = 1; // 증감 값
         int repeat = 0; // 두 번씩 반복
+        int[] dx = {-1, 0, 1, 0};
+        int[] dy = {0, 1, 0, -1};
         while (x >= 0 && y >= 0) {
             for (int i = 0; i < step; i++) {
                 count++;
-                if (v == 0) x -= 1; // 상
-                if (v == 1) y += 1; // 우
-                if (v == 2) x += 1; // 하
-                if (v == 3) y -= 1; // 좌
+                x += dx[v];
+                y += dy[v];
                 if (x < 0 || y < 0) break;
                 arr[x][y] = count;
             }
