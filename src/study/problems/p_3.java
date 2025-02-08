@@ -1,49 +1,46 @@
-package study.d_250206;
+package study.problems;
 
 import java.util.*;
 import java.io.*;
 
-public class p_2 {
+public class p_3 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        //given
         int n, m;
+        StringTokenizer st = new StringTokenizer(br.readLine());
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
         int[][] arr = new int[n][m];
 
-
+        //when
+        //배열 초기화
         for (int i = 0; i < n; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < m; j++) {
                 arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        for (int i = 0; i < n / 2; i++) {
+
+        int[][] reverse = new int[m][n]; // 회전 배열
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                int temp = arr[i][j];
-                arr[i][j] = arr[n - 1 - i][j];
-                arr[n - 1 - i][j] = temp;
+                reverse[j][n - 1 - i] = arr[i][j]; // 90도 회전
             }
         }
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m / 2; j++) {
-                int temp = arr[i][j];
-                arr[i][j] = arr[i][m - j - 1];
-                arr[i][m - j - 1] = temp;
-            }
-        }
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                bw.write(String.valueOf(arr[i][j] + " "));
+        //then
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                bw.write(reverse[i][j] + " ");
             }
             bw.newLine();
         }
-        bw.close();
+
         br.close();
+        bw.close();
     }
 }
+
